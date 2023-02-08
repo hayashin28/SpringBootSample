@@ -13,8 +13,21 @@
     </head>
     <body class="bg-light">
         <div class="text-center">
-
+            <form method="post" th:action="@{/login}" class="form-login">
+                <h2>ログイン</h2>
+                <!-- ユーザーID -->
+                <div class="bg-light">
+                    <label for="userId" class="sr-only">userId</label>
+                    <input type="text" class="form-control" placeholder="ユーザーID" name="userId"/>
+                </div>
+                <!-- パスワード -->
+                <div class="form-group">
+                    <label for="password" class="sr-only">password</label>
+                    <input type="text" class="form-control" placeholder="パスワード" name="password"/>
+                </div>
+                <input type="submit" value="ログイン" class="btn btn-primary"/>
+            </form>
+            <a th:href"@{/user/signup}">新規登録はこちら</a>
         </div>
-
     </body>
 </html>
