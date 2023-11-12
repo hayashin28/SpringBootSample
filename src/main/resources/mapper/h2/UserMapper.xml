@@ -27,4 +27,7 @@
         )
     </insert>
 
+    <select id="findMany" resultType="MUser">
+        select * from m_user
+    </select>
 </mapper>
