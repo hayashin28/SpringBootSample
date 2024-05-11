@@ -14,6 +14,7 @@ public class HelloRepository {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @SuppressWarnings("null")
     public Map<String, Object> findById(String id) {
 
     StringBuilder query = new StringBuilder();

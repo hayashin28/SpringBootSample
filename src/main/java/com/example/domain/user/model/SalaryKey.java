@@ -2,8 +2,7 @@ package com.example.domain.user.model;
 
 import java.io.Serializable;
 
-import javax.persistence.Embeddable;
-
+import jakarta.persistence.Embeddable;
 import lombok.Data;
 
 @Embeddable

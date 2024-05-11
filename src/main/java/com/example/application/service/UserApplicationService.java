@@ -37,6 +37,7 @@ public class UserApplicationService {
     private static final String SEPARATOR = File.separator;
 
     /** 性別のMapを生成する */
+    @SuppressWarnings("null")
     public Map<String, Integer> getGenderMap(Locale locale) {
         Map<String, Integer> genderMap = new LinkedHashMap<>();
         String male = messageSource.getMessage("male", null, locale);

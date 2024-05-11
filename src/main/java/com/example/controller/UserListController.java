@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import javax.servlet.http.HttpServletResponse;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -28,6 +26,7 @@ import com.example.domain.user.model.MUser;
 import com.example.domain.user.service.UserService;
 import com.example.form.UserListForm;
 
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 
 @Controller
@@ -105,6 +104,7 @@ public class UserListController {
     }
 
     /** zipファイルダウンロード処理 */
+    @SuppressWarnings("null")
     @PostMapping("/list/download/zip")
     public void downloadZip(@ModelAttribute UserListForm form, HttpServletResponse response)
             throws IOException {
